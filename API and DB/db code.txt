@@ -1,0 +1,28 @@
+CREATE DATABASE Students;
+USE Students;
+
+CREATE TABLE Students_List
+(
+Id INT AUTO_INCREMENT PRIMARY KEY,
+Personal_Number INT NOT NULL,
+Group_Name NVARCHAR(200) NOT NULL,
+Student_Last_Name NVARCHAR(200) NOT NULL,
+Student_First_Name NVARCHAR(200) NOT NULL,
+Student_Patronymic_Name NVARCHAR(200) NOT NULL
+);
+
+
+INSERT INTO Students_List (Personal_Number, Group_Name, Student_Last_Name, Student_First_Name, Student_Patronymic_Name)
+VALUES 
+    (111, 'Group A', 'Иванов', 'Петр', 'Сергеевич'),
+    (112, 'Group A', 'Петров', 'Иван', 'Александрович'),
+    (113, 'Group A', 'Сидоров', 'Александр', 'Иванович'),
+    (114, 'Group A', 'Кузнецов', 'Сергей', 'Алексеевич'),
+    (115, 'Group A', 'Смирнов', 'Алексей', 'Петрович'),
+    (226, 'Group B', 'Федоров', 'Владимир', 'Сергеевич'),
+    (227, 'Group B', 'Морозов', 'Игорь', 'Владимирович'),
+    (228, 'Group B', 'Волков', 'Дмитрий', 'Игоревич'),
+    (229, 'Group B', 'Алексеев', 'Егор', 'Дмитриевич'),
+    (2210, 'Group B', 'Лебедев', 'Михаил', 'Егорович');
+
+SELECT * FROM Students_List;
